@@ -35,7 +35,7 @@ builder.Services.AddCors(options =>
     // Política de Produção (Trava nos domínios oficiais)
     options.AddPolicy("ProductionPolicy", policy =>
     {
-        policy.WithOrigins(allowedOrigins!)
+        policy.AllowAnyOrigin() // Aceita qualquer porta (35723, 5000, etc)
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
