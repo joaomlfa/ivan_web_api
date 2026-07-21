@@ -1,0 +1,41 @@
+services:
+  # ==========================================
+  # BANCO DE DADOS (PostgreSQL)
+  # ==========================================
+  db:
+    image: postgres:15
+    container_name: ivanweb-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ivan_user
+      POSTGRES_PASSWORD: 197346Jf@
+      POSTGRES_DB: ivanweb_db
+    ports:
+      - "5434:5432" # Se a porta 5432 já estiver em uso no servidor, mude para "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  # ==========================================
+  # IVAN WEB API
+  # ==========================================
+  api:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: ivanweb-api
+    restart: always
+    ports:
+      - "5050:8080" # Você acessará a API no servidor via http://localhost:5050
+    depends_on:
+      - db
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      # A ConnectionString aponta para o container "db" usando o usuário e senha definidos acima
+      - ConnectionStrings__DefaultConnection=Host=db;Port=5434;Database=ivanweb_db;Username=ivan_user;Password=197346Jf@
+      # Adicione aqui outras chaves, como JwtSettings, chaves de API, etc.
+
+# ==========================================
+# VOLUMES (Para não perder os dados do banco)
+# ==========================================
+volumes:
+  pgdata:
