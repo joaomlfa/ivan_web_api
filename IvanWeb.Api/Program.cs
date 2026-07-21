@@ -51,6 +51,26 @@ builder.Services.AddCors(options =>
 
 var app = builder.Build();
 
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        // Troque 'ApplicationDbContext' pelo nome exato do seu DbContext
+        var context = services.GetRequiredService<ApplicationDbContext>();
+
+        // Isso faz o mesmo papel do "dotnet ef database update"
+        // Ele vai olhar o banco e aplicar qualquer migration pendente
+        context.Database.Migrate();
+
+        Console.WriteLine("Banco de dados atualizado com sucesso!");
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Ocorreu um erro ao migrar o banco de dados: {ex.Message}");
+    }
+}
+
 if (app.Environment.IsDevelopment())
 {
     app.UseCors("DevPolicy");
