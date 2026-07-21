@@ -35,17 +35,19 @@ builder.Services.AddCors(options =>
     // Política de Produção (Trava nos domínios oficiais)
     options.AddPolicy("ProductionPolicy", policy =>
     {
-        policy.AllowAnyOrigin() // Aceita qualquer porta (35723, 5000, etc)
+        policy.AllowAnyOrigin()
               .AllowAnyHeader()
-              .AllowAnyMethod();
+              .AllowAnyMethod()
+              .WithExposedHeaders("Accept-Ranges", "Content-Encoding", "Content-Length", "Content-Range");
     });
 
     // Política de Desenvolvimento (Libera a festa localmente)
     options.AddPolicy("DevPolicy", policy =>
     {
-        policy.AllowAnyOrigin() // Aceita qualquer porta (35723, 5000, etc)
+        policy.AllowAnyOrigin()
               .AllowAnyHeader()
-              .AllowAnyMethod();
+              .AllowAnyMethod()
+              .WithExposedHeaders("Accept-Ranges", "Content-Encoding", "Content-Length", "Content-Range");
     });
 });
 
