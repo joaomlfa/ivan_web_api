@@ -33,7 +33,7 @@ services:
       # A ConnectionString aponta para o container "db" usando o usuário e senha definidos acima
       - ConnectionStrings__DefaultConnection=Host=db;Port=5434;Database=ivanweb_db;Username=ivan_user;Password=197346Jf@
       # Adicione aqui outras chaves, como JwtSettings, chaves de API, etc.
-
+      - Cors__AllowedOrigins__0=https://praiaon-joaomlfa.web.app
 # ==========================================
 # VOLUMES (Para não perder os dados do banco)
 # ==========================================
