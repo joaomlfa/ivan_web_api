@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="IvanWeb.Api/IvanWeb.Api.csproj" />
+  <Project Path="IvanWeb.Application/IvanWeb.Application.csproj" />
+  <Project Path="IvanWeb.Domain/IvanWeb.Domain.csproj" />
+  <Project Path="IvanWeb.Infrastructure/IvanWeb.Infrastructure.csproj" />
+</Solution>

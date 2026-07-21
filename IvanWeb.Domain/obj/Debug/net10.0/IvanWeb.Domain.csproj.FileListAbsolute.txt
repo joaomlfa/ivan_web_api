@@ -1,0 +1,11 @@
+/home/joaomlfa/src/repo/ivan_web_api/IvanWeb.Domain/bin/Debug/net10.0/IvanWeb.Domain.deps.json
+/home/joaomlfa/src/repo/ivan_web_api/IvanWeb.Domain/bin/Debug/net10.0/IvanWeb.Domain.dll
+/home/joaomlfa/src/repo/ivan_web_api/IvanWeb.Domain/bin/Debug/net10.0/IvanWeb.Domain.pdb
+/home/joaomlfa/src/repo/ivan_web_api/IvanWeb.Domain/obj/Debug/net10.0/IvanWeb.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/home/joaomlfa/src/repo/ivan_web_api/IvanWeb.Domain/obj/Debug/net10.0/IvanWeb.Domain.AssemblyInfoInputs.cache
+/home/joaomlfa/src/repo/ivan_web_api/IvanWeb.Domain/obj/Debug/net10.0/IvanWeb.Domain.AssemblyInfo.cs
+/home/joaomlfa/src/repo/ivan_web_api/IvanWeb.Domain/obj/Debug/net10.0/IvanWeb.Domain.csproj.CoreCompileInputs.cache
+/home/joaomlfa/src/repo/ivan_web_api/IvanWeb.Domain/obj/Debug/net10.0/IvanWeb.Domain.dll
+/home/joaomlfa/src/repo/ivan_web_api/IvanWeb.Domain/obj/Debug/net10.0/refint/IvanWeb.Domain.dll
+/home/joaomlfa/src/repo/ivan_web_api/IvanWeb.Domain/obj/Debug/net10.0/IvanWeb.Domain.pdb
+/home/joaomlfa/src/repo/ivan_web_api/IvanWeb.Domain/obj/Debug/net10.0/ref/IvanWeb.Domain.dll

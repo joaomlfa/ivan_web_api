@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "IvanWeb.Domain/1.0.0": {
+        "runtime": {
+          "IvanWeb.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "IvanWeb.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
